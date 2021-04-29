@@ -1,24 +1,44 @@
 {
-  "name": "app",
+  "name": "TextProcessor-Regex",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "pdf-parse": "^1.1.1"
+  "scripts": {
+    "test": "npx mocha -r ts-node/register -w --parallel __test__/**/*.test.ts",
+    "test:cov": "npx nyc npx mocha -r ts-node/register --parallel __test__/**/*.test.ts",
+    "start": "tsnd src/index.ts"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
   },
   "devDependencies": {
-    "chai": "^4.3.3",
-    "mocha": "^8.3.1",
+    "@types/chai": "^4.2.17",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.0.0",
+    "@types/pdf-parse": "^1.1.0",
+    "@types/safe-regex": "^1.1.2",
+    "@types/sinon": "^10.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
     "nyc": "^15.1.0",
-    "safe-regex": "^2.1.1",
-    "sinon": "^9.2.4"
+    "sinon": "^10.0.0",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
   },
-  "scripts": {
-    "start": "node src/index.js",
-    "test": "npx mocha -w --parallel test/*.test.js",
-    "test:cov": "npx nyc npx mocha --parallel test/*.test.js"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiofernandes00/TextProcessor-Regex.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiofernandes00/TextProcessor-Regex/issues"
+  },
+  "homepage": "https://github.com/caiofernandes00/TextProcessor-Regex#readme",
+  "dependencies": {
+    "safe-regex": "^2.1.1",
+    "pdf-parse": "^1.1.1"
+  }
 }
